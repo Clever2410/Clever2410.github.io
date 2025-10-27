@@ -2,7 +2,6 @@ const DB_NAME = "ElBuenPaladarDB";
 const DB_VERSION = 1;
 let db;
 
-
 async function openDB() {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open(DB_NAME, DB_VERSION);
@@ -31,7 +30,6 @@ function tx(name, mode = "readonly") {
   if (!db) throw new Error("DB no inicializada aún");
   return db.transaction(name, mode).objectStore(name);
 }
-
 
 async function addUsuario(nombre, descripcion) {
   return new Promise((resolve, reject) => {
@@ -74,7 +72,6 @@ async function deleteUsuario(id) {
   });
 }
 
-/* ==== CRUD PEDIDOS ==== */
 async function addPedido(plato, descripcion, usuarioId) {
   return new Promise((resolve, reject) => {
     const store = tx("pedidos", "readwrite");
@@ -117,7 +114,6 @@ async function deletePedido(id) {
   });
 }
 
-/* ==== RENDERIZADO ==== */
 let usuarioEditId = null;
 let pedidoEditId = null;
 
@@ -180,7 +176,6 @@ async function renderPedidos() {
   });
 }
 
-/* ==== EDITAR ==== */
 function startEditUsuario(id, nombre, descripcion) {
   usuarioEditId = id;
   document.getElementById("usuario-nombre").value = nombre;
@@ -196,13 +191,11 @@ function startEditPedido(id, plato, descripcion, usuarioId) {
   document.getElementById("pedido-agregar").textContent = "GUARDAR CAMBIOS";
 }
 
-/* ==== RECARGAR ==== */
 async function loadData() {
   await renderUsuarios();
   await renderPedidos();
 }
 
-/* ==== ACCORDION ==== */
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("acc-btn")) {
     const panel = e.target.nextElementSibling;
@@ -254,4 +247,3 @@ openDB().then(() => {
 
   loadData();
 });
-
