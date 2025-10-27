@@ -140,7 +140,6 @@ input, select {
   border-radius: var(--radius);
 }
 
-/* Contacto */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -189,4 +188,5 @@ footer {
     font-size: 2rem;
   }
 }
+
 
