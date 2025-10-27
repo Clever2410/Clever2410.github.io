@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Buen Paladar | Guayaramerín - Bolivia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container header-flex">
+      <div class="logo">🍽️ El Buen Paladar</div>
+      <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div>
+        <button class="btn accent">Iniciar sesión</button>
+        <button class="btn accent">Registrarse</button>
+      </div>
+    </div>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Sabores que te enamoran ❤️</h1>
+      <p>El mejor lugar de Guayaramerín para disfrutar de chorrillanas, bifes, salchipapas y mucho más.</p>
+      <button class="btn accent">Ver Menú</button>
+    </div>
+  </section>
+
+  <section id="menu" class="menu-section container">
+    <h2>Nuestros Platos Estrella</h2>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="imagenes/chorrillana.jpg" alt="Chorrillana">
+        <h3>Chorrillana</h3>
+        <p>Papas fritas con carne, cebolla, huevo y condimentos especiales.</p>
+        <span class="price">Bs 35</span>
+      </div>
+      <div class="menu-card">
+        <img src="imagenes/Salchipapa.jpg" alt="Salchipapa">
+        <h3>Salchipapa</h3>
+        <p>Clásica salchipapa crujiente con salsas artesanales.</p>
+        <span class="price">Bs 25</span>
+      </div>
+      <div class="menu-card">
+        <img src="imagenes/bife.jpg" alt="Bife a la parrilla">
+        <h3>Bife a la parrilla</h3>
+        <p>Carne jugosa servida con papas, ensalada y arroz.</p>
+        <span class="price">Bs 45</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="crud" class="crud-section container">
+    <h2>Gestión del Restaurante</h2>
+    <div class="forms-grid">
+      <div class="card form-card">
+        <h3>Usuarios</h3>
+        <input id="usuario-nombre" placeholder="Nombre del usuario">
+        <input id="usuario-descripcion" placeholder="Rol o descripción">
+        <div class="actions">
+          <button id="usuario-agregar" class="btn accent">Agregar</button>
+          <button id="usuario-guardar" class="btn">Guardar</button>
+        </div>
+        <div class="list" id="lista-usuarios"></div>
+      </div>
+
+      <div class="card form-card">
+        <h3>Pedidos</h3>
+        <input id="pedido-plato" placeholder="Plato (Ej: Chorrillana)">
+        <input id="pedido-descripcion" placeholder="Detalles del pedido">
+        <select id="pedido-usuario">
+          <option value="">Seleccionar Usuario</option>
+        </select>
+        <div class="actions">
+          <button id="pedido-agregar" class="btn accent big">AGREGAR</button>
+        </div>
+        <div class="list" id="lista-pedidos"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" class="galeria-section container">
+    <h2>Galería</h2>
+    <div class="galeria-grid">
+      <img src="imagenes/Salchipapa.jpg" alt="Hamburguesa">
+      <img src="imagenes/bife2.jpg" alt="Bife">
+      <img src="imagenes/chorrillana.jpg" alt="Chorrillana">
+    </div>
+  </section>
+
+  <section id="contacto" class="contact-section">
+    <div class="container contact-grid">
+      <div>
+        <h2>Contáctanos</h2>
+        <p>📍 Guayaramerín - Beni - Bolivia</p>
+        <p>📞 +591 75191935</p>
+        <p>🕐 Lunes a Domingo: 11:00 - 23:00</p>
+      </div>
+      <iframe src="https://www.google.com/maps?q=Guayaramerin,Beni,Bolivia&output=embed" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-flex">
+      <p>© 2025 El Buen Paladar | Hecho con ❤️ en Bolivia</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
